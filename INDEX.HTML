@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CURRENCY CONVERTER</title>
+ <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+ <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</head>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(2.jpg);
+    }
+    h1{
+        background: #00cc9967;
+        text-align:start;
+        font-size: 30px;
+        padding: 10px 1em;
+        font-weight: bold;
+        margin-left: 2px;
+        margin-right: 2px;
+        cursor: pointer;
+        font-family: Times New Roman;
+        margin: -10px;
+       
+    }
+    marquee{
+       
+        background: #00ffff65;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    fieldset{
+      
+        margin:auto;
+        border: 1px solid #000;
+        text-align: left;
+        font-size: 20px;
+        font-family: lato, sans-serif;
+        font-weight: bolder;
+        color: rgb(0, 238, 255);
+    }
+    input[type=number],[id]{
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 2px;
+        border-width: 1px;
+        color: #36454b;
+        font-size: 15px;
+        margin: 5px;
+        padding: 12px;
+        display: inline-block;
+    }
+    input[type=button]{
+        width: 80px;
+        height: 43px;
+        font-weight: bold;
+    }
+    input[type=reset]{
+        width: 95px;
+        height: 43px;
+        font-weight: bold;
+    }
+    .logo{
+    color: #00ffff9f;
+    padding-left: 20px;
+    font-size: 35px;
+    font-family: Arial;
+    float: right;
+    padding-top: 10px;
+    text-shadow: 0 0 30px #00ff2a;
+}
+.navbar-brand img 
+ {
+     height: 40px;
+     padding-left: 20px;
+     width: 60px;
+ }
+</style>
+
+<script>
+function currencyconverter(valNum){
+    if(converter.naira.value <=0)
+    window.alert("Enter Value Greaterthan 0");
+    else{
+        document.getElementById("dollar").value = (valNum/610).toFixed(2);
+        document.getElementById("pound").value = (valNum/750).toFixed(2);
+        document.getElementById("cedi").value = (valNum/52.74).toFixed(2);
+        document.getElementById("dirham").value = (valNum/112.94).toFixed(2);
+        document.getElementById("Euro").value = (valNum/637).toFixed(2);
+    }
+}
+</script>
+
+<body>
+    <H1>CURRENCY CONVERTER</H1>
+    <h2 class="logo">EvaOGHALE</h2>
+    <marquee>use our free currency converter. Get accurate and reliable foreign exchange rates.</marquee>
+    <br><br>
+    <form name="converter">
+        <fieldset>
+<label>Naira Currency(Nigeria)<a class="navbar-brand" , href="#"><img src="Flag_of_Nigeria.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input type="number" name="naira" required>
+
+<input type="button" value="convert" onclick="currencyconverter(converter.naira.value)"><br><br>
+
+<label>Dollar(American)<span class="iconify" data-icon="bx:dollar"></span><a class="navbar-brand" , href="#"><img src="usa flag.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="dollar"><br><br>
+<label>Pound(UK)<span class="iconify" data-icon="bx:pound"></span><a class="navbar-brand" , href="#"><img src="uk.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="pound"><br><br>
+<label>Cedi(Ghana)<a class="navbar-brand" , href="#"><img src="ghana flag.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="cedi"><br><br>
+<label>Dirham(UAE)<a class="navbar-brand" , href="#"><img src="dirham.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="dirham"><br><br>
+<label>Euro(EU)<span class="iconify" data-icon="bx:euro"></span><a class="navbar-brand" , href="#"><img src="eu.png"></a></label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="Euro"><br><br>
+
+<input type="reset" value="reset form">
+
+<p align="center">You can press reset button for reseting the form</p>
+
+
+        </fieldset>
+    </form>
+</body>
+</html>
